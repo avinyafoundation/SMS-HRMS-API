@@ -1,0 +1,12 @@
+[db_config]
+USER="root"
+PASSWORD="samisa123"
+HOST="localhost"
+PORT=3306
+DATABASE="sms_db"
+
+[endpoint_ports]
+sms_endpoint=9090
+hrm_endpoint=9091
+acadamic_endpoint=9092
+inventory_endpoint=9093
