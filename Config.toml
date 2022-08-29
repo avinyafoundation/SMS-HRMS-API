@@ -1,7 +1,7 @@
 [db_config]
-USER="root"
-PASSWORD="samisa123"
-HOST="localhost"
+USER="avinyaDBAdmin"
+PASSWORD="Polkatu!23"
+HOST="avinyafoundation-db-server.mysql.database.azure.com"
 PORT=3306
 DATABASE="sms_db"
 
