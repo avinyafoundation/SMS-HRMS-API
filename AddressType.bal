@@ -1,7 +1,5 @@
 import ballerina/sql;
 
-import ballerina/http;
-
 public type AddressType record {
     int? id = ();
     string name;
@@ -74,11 +72,5 @@ isolated function deleteAddressType(int id) returns int|error {
         return affectedRowCount;
     } else {
         return error("Unable to obtain the affected row count for address_type delete");
-    }
-}
-
-@http:ServiceConfig {
-    cors: {
-        allowOrigins: ["*"]
     }
 }
