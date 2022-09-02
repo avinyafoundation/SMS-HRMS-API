@@ -82,24 +82,3 @@ isolated function deleteAddressType(int id) returns int|error {
         allowOrigins: ["*"]
     }
 }
-service /sms/util/addresstypes on smsEP {
-    isolated resource function get .() returns AddressType[]|error? {
-        return getAddressTypes();
-    }
-
-    isolated resource function get [int id]() returns AddressType|error? {
-        return getAddressType(id);
-    }
-
-    isolated resource function post .(@http:Payload AddressType addressType) returns int|error? {
-        return addAddressType(addressType);
-    }
-
-    isolated resource function put .(@http:Payload AddressType addressType) returns int|error? {
-        return updateAddressType(addressType);
-    }
-
-    isolated resource function delete [int id]() returns int|error? {
-        return deleteAddressType(id);       
-    }
-}

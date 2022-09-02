@@ -64,5 +64,25 @@ service / on smsEP {
     resource isolated function get sms/util/provinces() returns Province[]|error? {
         return getProvinces();
     }
+
+    isolated resource function get sms/util/addresstypes() returns AddressType[]|error? {
+        return getAddressTypes();
+    }
+
+    isolated resource function get sms/util/addresstypes/[int id]() returns AddressType|error? {
+        return getAddressType(id);
+    }
+
+    isolated resource function post sms/util/addresstypes(@http:Payload AddressType addressType) returns int|error? {
+        return addAddressType(addressType);
+    }
+
+    isolated resource function put sms/util/addresstypes(@http:Payload AddressType addressType) returns int|error? {
+        return updateAddressType(addressType);
+    }
+
+    isolated resource function delete sms/util/addresstypes/[int id]() returns int|error? {
+        return deleteAddressType(id);       
+    }
 }
 
