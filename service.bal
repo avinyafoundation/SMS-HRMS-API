@@ -402,23 +402,23 @@ service / on smsEP {
         return deleteTeamLead(id);       
     }
 
-        isolated resource function get sms/hrm/job_band() returns JobBand[]|error? {
+        isolated resource function get sms/hrm/job_bands() returns JobBand[]|error? {
         return getJobBands();
     }
 
-    isolated resource function get sms/hrm/job_band/[int id]() returns JobBand|error? {
+    isolated resource function get sms/hrm/job_bands/[int id]() returns JobBand|error? {
         return getJobBand(id);
     }
 
-    isolated resource function post sms/hrm/job_band(@http:Payload JobBand jobBand) returns int|error? {
+    isolated resource function post sms/hrm/job_bands(@http:Payload JobBand jobBand) returns int|error? {
         return addJobBand(jobBand);
     }
 
-    isolated resource function put sms/hrm/job_band(@http:Payload JobBand jobBand) returns int|error? {
+    isolated resource function put sms/hrm/job_bands(@http:Payload JobBand jobBand) returns int|error? {
         return updateJobBand(jobBand);
     }
 
-    isolated resource function delete sms/hrm/job_band/[int id]() returns int|error? {
+    isolated resource function delete sms/hrm/job_bands/[int id]() returns int|error? {
         return deleteJobBand(id);       
     }
 
